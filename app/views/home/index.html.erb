@@ -2,6 +2,8 @@
 <%= bootstrap_form_for(Post.create, :html => { :width => '100%;'}) do |f| %>
   <%= f.text_area :title %>
   <%= f.text_area :body %>
+  <%= f.check_box :facebook %>
+  <%= f.check_box :twitter %>
   <%= f.submit "Post" %>
 <% end %>
 </div>
