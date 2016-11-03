@@ -1,1 +1,7 @@
-<p> HEYOOOOO!!!</p>
+<div class="form-box">
+<%= bootstrap_form_for(Post.create, :html => { :width => '100%;'}) do |f| %>
+  <%= f.text_area :title %>
+  <%= f.text_area :body %>
+  <%= f.submit "Post" %>
+<% end %>
+</div>
