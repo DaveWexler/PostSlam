@@ -19,9 +19,22 @@
   position: relative;
 }
 
+.notice{
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .btn{
   position: relative;
+}
+
+.centered_box{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-box{

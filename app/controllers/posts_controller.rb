@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @post.twitter = true
     @post.facebook = true
     @post.save
-    flash[:notice] = "Post successfully created"
+    flash[:notice] = "Post successfully created!"
     redirect_to root_path
   end
 
