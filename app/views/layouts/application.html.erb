@@ -8,26 +8,29 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body id="grad">
-    <div class="button-group">
-      <label>
-        <input type="radio" name="button-group" value="item" checked>
-        <span class="button-group-item">Item</span>
-      </label>
-      <label>
-        <input type="radio" name="button-group" value="other-item">
-        <span class="button-group-item">Other But Longer Item</span>
-      </label>
-      <label>
-        <input type="radio" name="button-group" value="other-item">
-        <span class="button-group-item">Third</span>
-      </label>
-      <label>
-        <input type="radio" name="button-group" value="third">
-        <span class="button-group-item">Last Item</span>
-      </label>
-    </div>
+      <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="#">PostSlam</a>
+        <ul class="nav navbar-nav nav pull-right">
+          <li class="nav-item active ">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log Out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+              <a class="dropdown-item" href="#">Submit an Issue</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+    </nav>
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
