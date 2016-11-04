@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    byebug
     if post_params[:facebook] == "1"
       send_to_facebook
     end
