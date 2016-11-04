@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="https://use.fontawesome.com/f7ca8a9762.js"></script>
   <head>
     <title>PostSlam</title>
     <%= csrf_meta_tags %>
@@ -8,10 +9,29 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body id="grad">
+    <div class="button-group">
+      <label>
+        <input type="radio" name="button-group" value="item" checked>
+        <span class="button-group-item">Item</span>
+      </label>
+      <label>
+        <input type="radio" name="button-group" value="other-item">
+        <span class="button-group-item">Other But Longer Item</span>
+      </label>
+      <label>
+        <input type="radio" name="button-group" value="other-item">
+        <span class="button-group-item">Third</span>
+      </label>
+      <label>
+        <input type="radio" name="button-group" value="third">
+        <span class="button-group-item">Last Item</span>
+      </label>
+    </div>
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
     <%= yield %>
   </body>
+
 </html>

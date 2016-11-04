@@ -23,15 +23,15 @@ class PostsController < ApplicationController
   private
 
   def send_to_facebook
-    Adapter::Xapix::Facebook.new(post_params)
-    # if successful:
-    @post.facebook = true
+    # Adapter::Xapix::Facebook.new(post_params)
+    # # if successful:
+    # @post.facebook = true
   end
 
   def send_to_twitter
-    Adapter::Xapix::Twitter.new(post_params)
-    # if successful
-    @post.twitter = true
+    # Adapter::Xapix::Twitter.new(post_params)
+    # # if successful
+    # @post.twitter = true
   end
 
   def post_params

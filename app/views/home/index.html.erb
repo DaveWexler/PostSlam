@@ -1,9 +1,11 @@
 <div class="form-box">
-<%= bootstrap_form_for(Post.create, :html => { :width => '100%;'}) do |f| %>
+<%= bootstrap_form_for(Post.create) do |f| %>
   <%= f.text_area :title %>
   <%= f.text_area :body %>
-  <%= f.check_box :facebook %>
-  <%= f.check_box :twitter %>
+  <%= f.check_box :facebook, label: "", inline: true %>
+  <i class="fa fa-facebook-official fa-lg" aria-hidden="true"> </i>
+  <%= f.check_box :twitter, label: "", inline: true  %>
+  <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
   <%= f.submit "Post" %>
 <% end %>
 </div>
