@@ -1,3 +1,6 @@
-<% current.user.posts.each do |post| %>
-  <%= post.title post.created_at %>
+<div class="information-box">
+<h3> Your Post History </h3>
+<% current_user.posts.each do |post| %>
+  <%= link_to "#{post.title}, #{post.created_at}", post_path(post.id)%> <br />
 <% end %>
+</div>
