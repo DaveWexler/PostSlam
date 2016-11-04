@@ -1,7 +1,8 @@
 <div class="form-box">
 <%= bootstrap_form_for(Post.create) do |f| %>
   <%= f.text_area :title %>
-  <%= f.text_area :body %>
+  <%= f.text_area :body, id: 'text-body', onkeyup: 'update(this)' %>
+  <p id="twitter-count">Characters remaining for Twitter post: <span id="char">140</span></p>
   <%= f.check_box :facebook, label: "", inline: true, checked: true %>
   <i class="fa fa-facebook-official fa-lg" aria-hidden="true"> </i>
   <%= f.check_box :twitter, label: "", inline: true, checked: true %>
