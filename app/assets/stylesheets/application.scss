@@ -46,7 +46,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 .form-box{
   position: fixed;
   top: 30%;
@@ -57,7 +56,16 @@
 .navbar .nav.pull-right {
      float: right;
     margin-right: 98px; /*set margin this way in your custom styesheet*/
-  } 
+  }
+
+.navbar {
+ background-color: transparent;
+ background: transparent;
+ border-color: transparent;
+}
+
+.navbar li { color: #000 }
+
 
 #grad {
   background: #e96443; /* fallback for old browsers */
