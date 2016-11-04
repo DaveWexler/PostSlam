@@ -2,9 +2,9 @@
 <%= bootstrap_form_for(Post.create) do |f| %>
   <%= f.text_area :title %>
   <%= f.text_area :body %>
-  <%= f.check_box :facebook, label: "", inline: true %>
+  <%= f.check_box :facebook, label: "", inline: true, checked: true %>
   <i class="fa fa-facebook-official fa-lg" aria-hidden="true"> </i>
-  <%= f.check_box :twitter, label: "", inline: true  %>
+  <%= f.check_box :twitter, label: "", inline: true, checked: true %>
   <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
   <%= f.submit "Post" %>
 <% end %>
