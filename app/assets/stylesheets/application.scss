@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require rails_bootstrap_forms
+ *= require_tree .
  */
 @import "bootstrap";
 
@@ -76,7 +77,7 @@
 #navhead{
   font-family: Papyrus, fantasy;
 }
-// 
+//
 // #grad {
 //   background: #e96443; /* fallback for old browsers */
 //   background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
