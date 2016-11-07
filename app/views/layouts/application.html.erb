@@ -4,30 +4,15 @@
   <head>
     <title>PostSlam</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body id="grad">
-      <nav class="navbar navbar-light bg-faded">
-        <a class="navbar-brand" id="navhead" href="#">PostSlam</a>
-        <ul class="nav navbar-nav nav pull-right">
-          <li class="nav-item active ">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-            <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-              <a class="dropdown-item" href="/posts">Post History</a>
-              <a class="dropdown-item" data-method="delete" href="/users/sign_out">Log Out</a>
-              <a class="dropdown-item" href="#">Go Premium</a>
-            </div>
-          </li>
-        </ul>
-    </nav>
+
+    <%= render :partial => 'layouts/header' %>
+
+
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>

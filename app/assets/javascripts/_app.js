@@ -88,7 +88,7 @@ Map = {
 		if ($('#googleMap').length) {
 			var lat = $('#googleMap').attr('data-lat');
 			var lng = $('#googleMap').attr('data-lng');
-			
+
 			function initialize() {
 				var view = new google.maps.LatLng(lat, lng);
 				var mapOptions = {
@@ -98,15 +98,15 @@ Map = {
 					disableDefaultUI: false,
 					center: view,
 				}
-				
+
 				var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
-				
+
 				// Set custom marker
 				var myLatLng = new google.maps.LatLng(lat, lng);
 				var marker = new google.maps.Marker({
 					position: myLatLng,
 					map: map,
-					icon: 'img/map-pin.png'
+					icon: '../app/assets/images/mappin.png'
 				});
 			}
 
@@ -155,7 +155,7 @@ CountTo = {
 				triggerOnce: true,
 				offset: 'bottom-in-view'
 			});
-		}	
+		}
 	},
 	count: function(options) {
 		var $this = $(this);
