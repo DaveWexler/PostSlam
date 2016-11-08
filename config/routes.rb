@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     root to: "home#index"
   end
 
+  get '/contact', to: 'home#contact'
   get '/about', to: 'home#about'
+  get '/login', to: 'home#login'
 
 end

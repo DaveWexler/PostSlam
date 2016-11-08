@@ -4,6 +4,13 @@ class HomeController < ApplicationController
   end
 
   def about
+    redirect_to "/about"
+  end
+
+  def login
+  end
+
+  def contact
   end
 
 end
