@@ -19,36 +19,33 @@
 	<![endif]-->
 
 
-				<!-- Form -->
+
+	<div class="row">
+		<div class="col-xs-12 col-md-10 col-md-offset-1">
+			<form class="form loginRegistrationForm">
 				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-1">
-						<form class="form loginRegistrationForm">
-							<div class="row">
-								<div class="col-xs-12 col-sm-4 i">
-									<div class="input">
-										<input type="email" class="form-control input-field">
-										<label class="input-label">
-											<span class="input-label-content">Email Address</span>
-										</label>
-									</div>
+				  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+							<div class="col-xs-12 col-sm-4 i">
+								<div class="input">
+									<%= f.email_field :email, autofocus: true, class: "form-control input-field", :value => "email" %>
 								</div>
-								<div class="col-xs-12 col-sm-4 i">
-									<div class="input">
-										<input type="password" class="form-control input-field">
-										<label class="input-label">
-											<span class="input-label-content">Password</span>
-										</label>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4 i">
-									<button type="submit" class="btn btn-lg btn-yellow btn-effect">Create my account</button>
-								</div>
+						  </div>
+
+							<div class="col-xs-12 col-sm-4 i">
+								<div class="input">
+						      <%= f.password_field :password, autocomplete: "off", class: "form-control input-field", :value => "password" %>
+						    </div>
 							</div>
-						</form>
+						<div class="col-xs-12 col-sm-4 i">
+							<div class="input">
+				      <%= f.submit "Log in", class: "btn btn-lg btn-yellow btn-effect" %>
+						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
-	</header>
-</body>
-</html>
+	</div>
+
+	<%= render "devise/shared/links" %>
+
+	  <% end %>

@@ -9,6 +9,4 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'home#contact'
   get '/about', to: 'home#about'
-  get '/login', to: 'home#login'
-
 end
