@@ -15,17 +15,25 @@
       </div>
 
       <nav class="navbar-collapse collapse">
+        <% if current_user %>
         <ul class="nav navbar-nav">
           <li class="active sub">
-            <a href="/about" title="About">About</a>
+            <a href="#" title="About">My Account</a>
             <ul>
               <li><a href="/users/sign_out" data-method="delete" title="Icons">Log Out</a></li>
-              <li><a href="#" title="Landing" class="active">What even?? what</a></li>
+              <li><a href="/posts" class="active">Post History</a></li>
+              <li><a href="#" title="Login"></i> Go Premium </a></li>
             </ul>
           </li>
           <li><a href="/" title="account">Home</a></li>
           <li><a href="/contact" title="Contact">Contact</a></li>
-          <li class="login"><a href="/users/sign_up" title="Login"><i class="icon fa fa-lock"></i> Sign Up</a></li>
         </ul>
+        <% else %>
+        <ul class="nav navbar-nav">
+          <li><a href="/about" title="About">About</a></li>
+          <li><a href="/contact" title="Contact">Contact</a></li>
+            <li class="login"><a href="/users/sign_up" title="Login"><i class="icon fa fa-lock"></i> Sign Up</a></li>
+        </ul>
+      <% end %>
       </nav>
     </div>

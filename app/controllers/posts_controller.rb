@@ -21,6 +21,10 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @post = Post.find_by(id: params["id"])
+  end
+
   private
 
   def send_to_facebook
